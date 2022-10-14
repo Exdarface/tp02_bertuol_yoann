@@ -1,4 +1,4 @@
-<form ngNativeValidate (ngSubmit)="SubmitForm()">
+<form (ngSubmit)="SubmitForm()">
   <div>
     <label for="name">Name: </label>
     <input
@@ -7,6 +7,7 @@
       id="name"
       placeholder="Name"
       [(ngModel)]="client.lastname"
+      appLetterOnly
       required
     />
   </div>
@@ -18,6 +19,7 @@
       id="firstname"
       placeholder="Firstname"
       [(ngModel)]="client.firstname"
+      appLetterOnly
       required
     />
   </div>
@@ -41,6 +43,8 @@
       placeholder="Zip Code"
       [(ngModel)]="client.zip"
       (keypress)="zipKeyPressed($event)"
+      appNumberOnly
+      length="5"
       required
     />
   </div>
@@ -52,6 +56,7 @@
       id="city"
       placeholder="City"
       [(ngModel)]="client.city"
+      appLetterOnly
       required
     />
   </div>
@@ -63,6 +68,7 @@
       id="country"
       placeholder="Country"
       [(ngModel)]="client.country"
+      appLetterOnly
       required
     />
   </div>
@@ -75,6 +81,8 @@
       placeholder="Phone"
       [(ngModel)]="client.phone"
       (keypress)="phoneKeyPressed($event)"
+      appNumberOnly
+      length="10"
       required
     />
   </div>
@@ -131,6 +139,7 @@
       id="login"
       placeholder="Login"
       [(ngModel)]="client.login"
+      appLetterOnly
       required
     />
   </div>

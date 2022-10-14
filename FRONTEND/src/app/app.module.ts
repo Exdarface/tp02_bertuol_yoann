@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
-import { FormDataComponent } from './form-data/form-data.component';
 import { ClientInfoComponent } from './client-info/client-info.component';
 import { PhonePipePipe } from './phone-pipe.pipe';
+import { LetterOnlyDirective } from './letter-only.directive';
+import { NumberOnlyDirective } from './number-only.directive';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { PhonePipePipe } from './phone-pipe.pipe';
     HeaderComponent,
     FooterComponent,
     FormComponent,
-    FormDataComponent,
     ClientInfoComponent,
     PhonePipePipe,
+    LetterOnlyDirective,
+    NumberOnlyDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
